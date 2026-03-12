@@ -126,6 +126,8 @@ https://github.com/user-attachments/assets/3268a118-3e77-42b3-95c2-7eae8ba5a4b1
 
 https://github.com/user-attachments/assets/26bb02c4-7d5d-4947-ad26-aabadc97aa4f
 
+https://github.com/user-attachments/assets/744abf7f-a9bd-43f5-87b4-caba63706902
+
 ## Technical Details
 
 - All fuzzing HTTP requests are sent through Burp's own HTTP client so they appear in Proxy history and respect upstream proxy settings
