@@ -122,6 +122,8 @@ The built in wordlist contains 680+ parameter names covering common patterns acr
 | ui/ParamHunterTab.java | Swing based UI tab with controls and findings display |
 | ui/FindingsTable.java | Table model backing the findings JTable |
 
+https://github.com/user-attachments/assets/3268a118-3e77-42b3-95c2-7eae8ba5a4b1
+
 ## Technical Details
 
 - All fuzzing HTTP requests are sent through Burp's own HTTP client so they appear in Proxy history and respect upstream proxy settings
