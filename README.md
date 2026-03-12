@@ -124,6 +124,8 @@ The built in wordlist contains 680+ parameter names covering common patterns acr
 
 https://github.com/user-attachments/assets/3268a118-3e77-42b3-95c2-7eae8ba5a4b1
 
+https://github.com/user-attachments/assets/26bb02c4-7d5d-4947-ad26-aabadc97aa4f
+
 ## Technical Details
 
 - All fuzzing HTTP requests are sent through Burp's own HTTP client so they appear in Proxy history and respect upstream proxy settings
