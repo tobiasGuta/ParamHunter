@@ -30,7 +30,7 @@ ParamHunter passively monitors your HTTP traffic and, for each unique endpoint i
 
 6. **Binary Search Isolation**: When a batch triggers a difference, the batch is recursively split in half and retested to isolate exactly which parameter caused the change. Each candidate is then confirmed with an individual request.
 
-6. **Rate Limit Handling**: If the server responds with HTTP 429, the fuzzer backs off with exponential delay and retries up to three times before moving on.
+6. **Rate Limit Handling**: If the server responds with HTTP 429 and includes a Retry-After header, ParamHunter will automatically pause for the specified duration and resume fuzzing. If no header is present, it uses exponential backoff. You can also manually pause or cancel fuzzing at any time from the UI.
 
 ## Installation
 
@@ -91,6 +91,8 @@ A table with columns for Timestamp, Host, Endpoint, Method, Discovered Parameter
 
 - **Export Findings (CSV)**: Saves all findings to a CSV file
 - **Clear Findings**: Removes all findings from the table and resets stats
+- **Pause Fuzzing**: Temporarily stops all fuzzing tasks. Resume by toggling the Pause button again.
+- **Cancel Fuzzing**: Immediately stops all fuzzing tasks and cancels any in-progress brute force operations.
 
 ### Stats Bar
 
@@ -143,3 +145,11 @@ https://github.com/user-attachments/assets/b3b76fca-9a6a-4796-a147-7c8a41b3edfd
 ## License
 
 This project is provided as is for security testing and research purposes. Use responsibly and only against systems you have authorization to test.
+
+## New Features (March 2026)
+
+- **Pause Fuzzing**: You can pause brute forcing at any time using the new Pause button in the UI. Fuzzing will wait until resumed.
+- **Cancel Fuzzing**: The Cancel button immediately stops all brute force tasks.
+- **Smart Rate Limit Handling**: If the server responds with HTTP 429 and provides a Retry-After header, ParamHunter will automatically wait the specified time and resume fuzzing where it left off.
+
+---
